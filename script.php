@@ -77,25 +77,10 @@ function getUsers($u, $p, $type, $page)
     return $json;
 }
 
-function notify($telegram_api, $chat_id, $msg)
-{
-    $cURLConnection = curl_init();
-    curl_setopt(
-        $cURLConnection,
-        CURLOPT_URL,
-        "https://api.telegram.org/bot" . $telegram_api . "/sendMessage?chat_id=" . $chat_id . "&parse_mode=html&text=" . urlencode($msg)
-    );
-    curl_setopt($cURLConnection, CURLOPT_RETURNTRANSFER, true);
-    $json = curl_exec($cURLConnection);
-    curl_close($cURLConnection);
-	
-}
 
 
 $username = $argv[1];
 $password = $argv[2];
-$tokenAPI = $argv[3];
-$chatID = $argv[4];
 
 $res = checkCount($username, $password);
 $data = json_decode($res, true);
@@ -127,9 +112,6 @@ if ($data["followers"] != $data["following"]) {
         }
         $followers = array_merge($list, $followers);
 
-        //foreach ($list as $lg){
-        //	array_push($followers, $lg['login'];
-        //}
         $z++;
     }
 
@@ -184,7 +166,6 @@ if ($data["followers"] != $data["following"]) {
 			$ms .= "✅ Follow -> <a href=\"" .  $fl["html_url"] . "\">" . $fl["login"] . "</a> " . PHP_EOL;
         }
     }
-	// notify($tokenAPI, $chatID, $ms);
     //file_put_contents("change.txt", $change . $message);
 } else {
     //file_put_contents("change.txt", "No changes". $message);
