@@ -184,7 +184,7 @@ if ($data["followers"] != $data["following"]) {
 			$ms .= "✅ Follow -> <a href=\"" .  $fl["html_url"] . "\">" . $fl["login"] . "</a> " . PHP_EOL;
         }
     }
-	notify($tokenAPI, $chatID, $ms);
+	// notify($tokenAPI, $chatID, $ms);
     //file_put_contents("change.txt", $change . $message);
 } else {
     //file_put_contents("change.txt", "No changes". $message);
