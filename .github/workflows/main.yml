@@ -24,6 +24,7 @@ jobs:
         - name: Pull and merge
           run: |
                 git config --local user.name "chronos-auto"
+                git config --global user.email "support@chronos.ke"
                 # git add -A
                 # git commit -m "changes" -a
                 # git fetch origin main  # Fetch changes from the remote 'main' branch
