@@ -3,11 +3,11 @@ Follow and unfollow users automatically
 
 [![Script](https://github.com/fbiego/auto-follow-unfollow/actions/workflows/main.yml/badge.svg)](https://github.com/fbiego/auto-follow-unfollow/actions/workflows/main.yml)
 ### Run details
-- Last run `Mon, 16 Mar 2026 00:01:59 +0000`
+- Last run `Mon, 16 Mar 2026 03:30:22 +0000`
 - X-RateLimit-Used: `0`
 - X-RateLimit-Limit: `5000`
 
 |  | Followers | Following |
 | - | --------- | --------- |
-| Current | 241 | 241 |
-| Change | 0 | 8|
+| Current | 239 | 241 |
+| Change | -1 | 8|
